@@ -13,7 +13,6 @@ const basicArray = [
 ];
 let exerciceArray = [];
 
-// Get stored exercices array
 (() => {
     if (localStorage.exercices) {
         exerciceArray = JSON.parse(localStorage.exercices);
@@ -51,7 +50,7 @@ class Exercice {
                 this.seconds--;
                 this.updateCountdown();
             }
-        }, 10);
+        }, 1000);
 
         return (main.innerHTML = `
             <div class="exercice-container">
